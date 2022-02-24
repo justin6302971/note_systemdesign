@@ -23,17 +23,20 @@ dive into the draft tinder architecture for system design
 * client -> profile services -> db
 * client -> image service -> dfs(distributed file system)
 
-#### recommand matches
-TBD
-
-#### note matches
-TBD
-
+#### recommand and note matches
+* client(try get recommand matches and save matches) -> matcher services -> db
+* client(try send direct message )-> check matcher service and session store
+  
 #### direct message
-TBD
+* client -> xmpp ->tcp -> session store
 
 ### design detail tradeoffs
 1. file vs blobs, file is cheaper, faster and can be use with cdn(content network delivery)
+
+### tech detail
+* sharding and horizontal concept concept
+*  
+
 
 ## references
 1. [tinder architecture video](https://www.youtube.com/watch?v=tndzLznxq40&list=WL&index=10)
